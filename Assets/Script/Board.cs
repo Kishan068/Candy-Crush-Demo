@@ -27,10 +27,7 @@ public class Board : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey("escape"))
-        {
-            Application.Quit();
-        }
+
     }
 
     public void reset()
