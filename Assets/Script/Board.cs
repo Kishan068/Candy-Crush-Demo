@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Board : MonoBehaviour
 {
@@ -23,6 +24,18 @@ public class Board : MonoBehaviour
         score.text = sc.ToString();
         Match = FindObjectOfType<MatchFinder>();
         PlayerPrefs.SetInt("score",sc);
+    }
+    void Update()
+    {
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+    }
+
+    public void reset()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 
     void GanrateBoard()
